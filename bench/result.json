@@ -1,0 +1,41 @@
+{
+ "generatedBy": "bench/bench.mjs",
+ "node": "v24.19.0",
+ "samples": 5,
+ "coldStartMs": 590.2,
+ "medianMs": 520.82,
+ "minMs": 509.74,
+ "p95Ms": 526.94,
+ "stddevMs": 5.64,
+ "relStddev": 0.0108,
+ "exact": {
+  "seeds": 12,
+  "shards": 12,
+  "triangles": 312,
+  "volumeError": "0",
+  "totalVolume": "1",
+  "boxVolume": "1",
+  "watertightShards": 12,
+  "pairedHalfEdges": 270,
+  "scaleSignatureIdenticalAt": [
+   "1/1000",
+   "1/100",
+   "1/10",
+   "1",
+   "10",
+   "1000"
+  ]
+ },
+ "baselines": {
+  "float64UnitRelError": -2.220446049250313e-16,
+  "float64UnitUnpairedHalfEdges": 88,
+  "float64MilliScaleRelError": 0.3684780226532042,
+  "voxel48MeanShardRelError": 0.001074
+ },
+ "oracle": {
+  "points": 20000,
+  "insideExactlyOne": 20000,
+  "ms": 6202.3,
+  "usPerPoint": 310.12
+ }
+}

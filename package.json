@@ -1,0 +1,14 @@
+{
+  "name": "voronoi-fracture-cert",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exact rational Voronoi fracture with a zero-error volume and watertightness certificate",
+  "scripts": {
+    "gen": "node tools/gen-sample.mjs",
+    "verify": "node bench/verify.mjs",
+    "bench": "node bench/bench.mjs",
+    "serve": "python3 -m http.server 4173"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>voronoi-fracture-cert — exact rational shard certificate</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; background: #0b0f14; color: #d7e3f4; }
+  #app { position: fixed; inset: 0; }
+  #panel { position: fixed; top: 12px; left: 12px; width: 330px; padding: 12px 14px; background: #111a22dd;
+           border: 1px solid #24384a; border-radius: 10px; backdrop-filter: blur(6px); }
+  h1 { font-size: 15px; margin: 0 0 6px; letter-spacing: .2px; }
+  .muted { color: #7d94ab; }
+  .row { margin: 7px 0; }
+  .ok { color: #4ade80; } .bad { color: #f87171; }
+  input[type=range] { width: 100%; }
+  button { background: #1d3247; color: #d7e3f4; border: 1px solid #2f4c66; border-radius: 6px; padding: 5px 9px; cursor: pointer; }
+  button:hover { background: #26425c; }
+  #cert { white-space: pre-wrap; font-size: 12px; color: #9fe8c0; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="panel">
+  <h1>voronoi-fracture-cert</h1>
+  <div class="muted">Exact rational Voronoi fracture. Every shard volume is a BigInt fraction; the certificate is recomputed in this tab by the same <code>src/core.mjs</code> that node runs.</div>
+  <div class="row">scene <select id="scene"></select></div>
+  <div class="row">explode <span id="exVal">0.00</span><input id="explode" type="range" min="0" max="1" step="0.005" value="0.35" /></div>
+  <div class="row"><button id="recompute">Recompute certificate</button></div>
+  <div class="row" id="cert">press the button to verify in-browser</div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
